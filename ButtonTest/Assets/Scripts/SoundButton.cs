@@ -4,27 +4,11 @@ using UnityEngine;
 
 public class SoundButton : MonoBehaviour
 {
-//1 36 09
-    [SerializeField] AudioClip[] m_audioClips;
+    [SerializeField] AudioClip[] m_audioClips = null;
 
     private Dictionary<int, bool> m_enabledClips = new Dictionary<int, bool>();
 
     private AudioSource m_audioSource;
-
-    void Start() {
-        for( int audioClipIndex = 0; audioClipIndex < m_audioClips.Length; audioClipIndex++){
-            m_enabledClips[audioClipIndex] = true;
-        }
-        m_audioSource = GetComponent<AudioSource>();
-    }
-
-    private List<int> GetIndexesOfActiveSoundClips(){
-        List<int> activeSoundClipsIndexes = new List<int>();
-        foreach( KeyValuePair<int, bool> entry in m_enabledClips){
-            if( entry.Value ) activeSoundClipsIndexes.Add( entry.Key);
-        }
-        return activeSoundClipsIndexes;
-    }
 
     public void ToogleAudioClip( int clipIndex){
         m_enabledClips[clipIndex] = !m_enabledClips[clipIndex];
@@ -38,4 +22,18 @@ public class SoundButton : MonoBehaviour
         m_audioSource.Play();
     }
 
+    private void Start() {
+        for( int audioClipIndex = 0; audioClipIndex < m_audioClips.Length; audioClipIndex++){
+            m_enabledClips[audioClipIndex] = true;
+        }
+        m_audioSource = GetComponent<AudioSource>();
+    }
+
+    private List<int> GetIndexesOfActiveSoundClips(){
+        List<int> activeSoundClipsIndexes = new List<int>();
+        foreach( KeyValuePair<int, bool> entry in m_enabledClips){
+            if( entry.Value ) activeSoundClipsIndexes.Add( entry.Key);
+        }
+        return activeSoundClipsIndexes;
+    }
 }

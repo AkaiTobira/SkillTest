@@ -285,6 +285,7 @@ GameObject:
   - component: {fileID: 88354661}
   - component: {fileID: 88354663}
   - component: {fileID: 88354662}
+  - component: {fileID: 88354664}
   m_Layer: 0
   m_Name: ButtonsController
   m_TagString: Untagged
@@ -418,6 +419,19 @@ MonoBehaviour:
   - {fileID: 8300000, guid: b5410c4ed696f814db486f8faa4228b0, type: 3}
   - {fileID: 8300000, guid: e1bcd2da725e2594d85f9a5db24da459, type: 3}
   - {fileID: 8300000, guid: 9638a4de419983c48a81215c54bde240, type: 3}
+--- !u!114 &88354664
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 88354660}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c34179384ec125048aba712c4839f89e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_popUpWindow: {fileID: 363790379}
 --- !u!1 &270973465
 GameObject:
   m_ObjectHideFlags: 0
@@ -577,7 +591,18 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 347762403}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 88354664}
+        m_MethodName: ClosePopUpWindow
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &347762403
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -626,6 +651,7 @@ GameObject:
   - component: {fileID: 363790380}
   - component: {fileID: 363790382}
   - component: {fileID: 363790381}
+  - component: {fileID: 363790383}
   m_Layer: 5
   m_Name: PupUpWindow
   m_TagString: Untagged
@@ -692,6 +718,25 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 363790379}
   m_CullTransparentMesh: 0
+--- !u!95 &363790383
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 363790379}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: fb20dd0a4760f2c4d8d8230d340ec785, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &427384869
 GameObject:
   m_ObjectHideFlags: 0
@@ -1110,7 +1155,18 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 556546599}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 88354664}
+        m_MethodName: ShowPopUpWindow
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &556546599
 MonoBehaviour:
   m_ObjectHideFlags: 0
