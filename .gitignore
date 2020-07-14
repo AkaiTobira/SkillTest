@@ -1,0 +1,11 @@
+
+*.json
+*.csproj
+
+/ButtonTest/Library
+/ButtonTest/Logs
+/ButtonTest/.vscode
+/ButtonTest/Temp
+/ButtonTest/Packages
+
+
