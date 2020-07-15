@@ -5,7 +5,6 @@ using UnityEngine.UI;
 
 public class TextButton : MonoBehaviour
 {
-
     public Text m_textPrefab;
     public Transform m_textShowArea;
     public float m_borderOffsetHorizontal;
@@ -20,6 +19,7 @@ public class TextButton : MonoBehaviour
 
     public void OnButtonPress(){
         Text tempTextBox = Instantiate(m_textPrefab, GetRandomPositionInShowArea(), m_textShowArea.rotation );
+        Debug.Log( tempTextBox);
         tempTextBox.transform.SetParent(m_textShowArea, false);
     }
 

@@ -5,8 +5,7 @@ using UnityEngine;
 public class PopUpButton : MonoBehaviour
 {
     
-    [SerializeField] GameObject m_popUpWindow;
-
+    [SerializeField] GameObject m_popUpWindow = null;
     private Animator m_animator;
 
     void Start() {

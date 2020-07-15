@@ -5,9 +5,7 @@ using UnityEngine;
 public class SoundButton : MonoBehaviour
 {
     [SerializeField] AudioClip[] m_audioClips = null;
-
     private Dictionary<int, bool> m_enabledClips = new Dictionary<int, bool>();
-
     private AudioSource m_audioSource;
 
     public void ToogleAudioClip( int clipIndex){

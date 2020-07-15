@@ -6,20 +6,19 @@ using UnityEngine.UI;
 [RequireComponent(typeof(Animator))]
 public class TextTimeLife : MonoBehaviour
 {
-    public float secondsToDestroy = 0;
-    private float timeOfExistence = 0;
-
+    public float m_secondsToDestroy        = 0;
+    public float m_expectedTimeOfExistance = 3.2f;
+    private float m_timeOfExistence        = 0;
     private Animator m_animator;
 
     void Start(){
         m_animator = GetComponent<Animator>();
-        Destroy( gameObject, secondsToDestroy );
+        Destroy( gameObject, m_secondsToDestroy );
     }
 
-    void Update()
-    {
-        timeOfExistence += Time.deltaTime;
-        m_animator.SetFloat("timeOnScene", timeOfExistence);
-        GetComponent<Text>().text = "This text will deaspear in " +  Mathf.Max( 3.2f - timeOfExistence, 0 ).ToString();
+    void Update(){
+        m_timeOfExistence += Time.deltaTime;
+        m_animator.SetFloat("timeOnScene", m_timeOfExistence);
+        GetComponent<Text>().text = "This text will deaspear in " +  Mathf.Max( m_expectedTimeOfExistance - m_timeOfExistence, 0 ).ToString();
     }
 }

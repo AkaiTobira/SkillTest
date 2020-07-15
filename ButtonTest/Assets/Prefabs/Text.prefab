@@ -79,7 +79,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 'This text will deaspear in '
+  m_Text: 'This text will disappear in '
 --- !u!95 &7073837867217251421
 Animator:
   serializedVersion: 3
@@ -111,4 +111,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 639d68731e251684fa05161ad9ee90a9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  secondsToDestroy: 5
+  m_secondsToDestroy: 5
+  m_expectedTimeOfExistance: 3.2
