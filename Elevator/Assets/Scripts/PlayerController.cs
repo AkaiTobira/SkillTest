@@ -39,8 +39,6 @@ public class PlayerController : MonoBehaviour
         }
     }
 
-
-
     void MouseAiming ()
     {
         float y = Input.GetAxis("Mouse X") * turnSpeed;
